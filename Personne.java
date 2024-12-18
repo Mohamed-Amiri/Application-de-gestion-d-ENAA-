@@ -9,6 +9,7 @@ public abstract class Personne {
         this.firsName = firsName;
         this.lastName = lastName;
         this.email = email;
+
     }
 
     public int getId() {

@@ -1,39 +1,31 @@
-public class Apprenants {
-    String firstname;
-    String lastname;
-    String email;
-    String phon_number;
+import java.util.ArrayList;
+
+public class Apprenants  extends Personne{
+   Classe classe ;
+private ArrayList<Double> notes;
+
+public Apprenants(int id , String firsName,String lastName, String  email,  Classe classe, Double notes){
+    super(id, firsName, lastName, email);
+    this.classe = classe;
+    this.notes =notes ;
 
 
+}
 
-
-    public void setFirstname(String firstname) {
-        this.firstname = firstname;
-    }
-    public String getFirstname() {
-        return firstname;
-    }
-
-    public void setLastname(String lastname) {
-        this.lastname = lastname;
+    public Classe getClasse() {
+        return classe;
     }
 
-    public String getLastname() {
-        return lastname;
+    public ArrayList<Double> getNotes() {
+        return notes;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
-    public String getEmail() {
-        return email;
+    public void setClasse(Classe classe) {
+        this.classe = classe;
     }
 
-    public void setPhon_number(String phon_number) {
-        this.phon_number = phon_number;
+    public void setNotes(ArrayList<Double> notes) {
+        this.notes = notes;
     }
 
-    public String getPhon_number() {
-        return phon_number;
-    }
 }

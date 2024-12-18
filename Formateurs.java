@@ -18,7 +18,9 @@ public class Formateurs extends Personne {
         return spécialité;
     }
 
-
+    public void setClasse(Classe classe) {
+        this.classe = classe;
+    }
 
     public void setSalair(int salair) {
         this.salair = salair;
