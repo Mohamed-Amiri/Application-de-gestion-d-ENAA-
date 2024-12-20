@@ -1,17 +1,18 @@
 public abstract class Personne {
-    private int id ;
-   private String firsName ;
-   private String lastName ;
-  private   String  email;
+    private int id;
+    private String firstName;
+    private String lastName;
+    private String email;
 
-    public Personne(int id, String firsName, String lastName, String email) {
+    // Constructor
+    public Personne(int id, String firstName, String lastName, String email) {
         this.id = id;
-        this.firsName = firsName;
+        this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
-
     }
 
+    // Getters and Setters
     public int getId() {
         return id;
     }
@@ -20,12 +21,12 @@ public abstract class Personne {
         this.id = id;
     }
 
-    public String getFirsName() {
-        return firsName;
+    public String getFirstName() {
+        return firstName;
     }
 
-    public void setFirsName(String firsName) {
-        this.firsName = firsName;
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
     public String getLastName() {
@@ -42,5 +43,19 @@ public abstract class Personne {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    // Abstract method to be implemented by subclasses
+    public abstract void displayRole();
+
+    // Overriding toString method for better object representation
+    @Override
+    public String toString() {
+        return "Personne{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                '}';
     }
 }
